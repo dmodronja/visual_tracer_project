@@ -12,7 +12,7 @@ if not exist "env" (
 
     echo [2/3] - Installazione flask, geoip2...
     call env\Scripts\activate.bat
-    pip install --quiet --no-index --find-links./packages -r packages/requirements.txt
+    call env\Scripts\pip install --quiet --no-index --find-links ./packages -r packages/requirements.txt
     del /f "packages"
 )
 
