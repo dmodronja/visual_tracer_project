@@ -1,0 +1,108 @@
+{
+    "mil": {"lat": 45.4642, "lon": 9.1900, "city": "Milano (Dorsale / MIX)"},
+    "milan": {"lat": 45.4642, "lon": 9.1900, "city": "Milano (Dorsale / MIX)"},
+    "mxp": {"lat": 45.6301, "lon": 8.7231, "city": "Milano Malpensa"},
+    "lin": {"lat": 45.4451, "lon": 9.2777, "city": "Milano Linate"},
+
+    "rm": {"lat": 41.9028, "lon": 12.4964, "city": "Roma (Dorsale / NaMeX)"},
+    "rom": {"lat": 41.9028, "lon": 12.4964, "city": "Roma (Dorsale / NaMeX)"},
+    "rome": {"lat": 41.9028, "lon": 12.4964, "city": "Roma (Dorsale / NaMeX)"},
+    "fco": {"lat": 41.8003, "lon": 12.2389, "city": "Roma Fiumicino"},
+
+    "tor": {"lat": 45.0703, "lon": 7.6869, "city": "Torino (Nodo)"},
+    "trn": {"lat": 45.2008, "lon": 7.6496, "city": "Torino Caselle"},
+
+    "bol": {"lat": 44.4949, "lon": 11.3426, "city": "Bologna (Nodo)"},
+    "blq": {"lat": 44.5308, "lon": 11.2887, "city": "Bologna Borgo P."},
+
+    "nap": {"lat": 40.8518, "lon": 14.2681, "city": "Napoli (Nodo)"},
+    "naples": {"lat": 40.8518, "lon": 14.2681, "city": "Napoli (Nodo)"},
+
+    "ven": {"lat": 45.4408, "lon": 12.3155, "city": "Venezia (Nodo)"},
+    "vce": {"lat": 45.5053, "lon": 12.3519, "city": "Venezia Tessera"},
+
+    "gen": {"lat": 44.4056, "lon": 8.9463, "city": "Genova (Approdo Cavi Sottomarini)"},
+    "goa": {"lat": 44.4133, "lon": 8.8475, "city": "Genova Sestri"},
+
+    "fir": {"lat": 43.7696, "lon": 11.2558, "city": "Firenze"},
+    "flr": {"lat": 43.8086, "lon": 11.2012, "city": "Firenze Peretola"},
+
+    "pal": {"lat": 38.1157, "lon": 13.3615, "city": "Palermo (Hub Cavi Med)"},
+    "palermo": {"lat": 38.1157, "lon": 13.3615, "city": "Palermo (Approdo cavo SEA-ME-WE)"},
+    "pmo": {"lat": 38.1820, "lon": 13.1034, "city": "Palermo Punta Raisi"},
+
+    "cta": {"lat": 37.4703, "lon": 15.0658, "city": "Catania Fontanarossa"},
+    "bri": {"lat": 41.1389, "lon": 16.7606, "city": "Bari Palese"},
+    "cag": {"lat": 39.2515, "lon": 9.0543, "city": "Cagliari Elmas"},
+
+    "fra": {"lat": 50.1109, "lon": 8.6821, "city": "Francoforte (DE - DE-CIX)"},
+    "frankfurt": {"lat": 50.1109, "lon": 8.6821, "city": "Francoforte (DE - DE-CIX)"},
+
+    "ams": {"lat": 52.3676, "lon": 4.9041, "city": "Amsterdam (NL - AMS-IX)"},
+    "amsterdam": {"lat": 52.3676, "lon": 4.9041, "city": "Amsterdam (NL - AMS-IX)"},
+
+    "lon": {"lat": 51.5074, "lon": -0.1278, "city": "Londra (UK - LINX)"},
+    "london": {"lat": 51.5074, "lon": -0.1278, "city": "Londra (UK - LINX)"},
+    "lhr": {"lat": 51.4700, "lon": -0.4543, "city": "Londra Heathrow"},
+    "bude": {"lat": 50.8262, "lon": -4.5436, "city": "Bude (UK - Approdo Transatlantico)"},
+
+    "par": {"lat": 48.8566, "lon": 2.3522, "city": "Parigi (FR)"},
+    "paris": {"lat": 48.8566, "lon": 2.3522, "city": "Parigi (FR)"},
+    "cdg": {"lat": 49.0097, "lon": 2.5479, "city": "Parigi CDG"},
+
+    "marseille": {"lat": 43.2965, "lon": 5.3698, "city": "Marsiglia (Hub Cavi Sottomarini Med)"},
+    "mrs": {"lat": 43.2965, "lon": 5.3698, "city": "Marsiglia (Hub Cavi Sottomarini Med)"},
+
+    "mad": {"lat": 40.4168, "lon": -3.7038, "city": "Madrid (ES)"},
+    "madrid": {"lat": 40.4168, "lon": -3.7038, "city": "Madrid (ES)"},
+    "bar": {"lat": 41.3851, "lon": 2.1734, "city": "Barcellona (ES)"},
+    "bcn": {"lat": 41.2974, "lon": 2.0833, "city": "Barcellona El Prat"},
+    "bilbao": {"lat": 43.2630, "lon": -2.9350, "city": "Bilbao (ES - Cavo Marea)"},
+    "bio": {"lat": 43.2630, "lon": -2.9350, "city": "Bilbao (ES - Cavo Marea)"},
+
+    "lis": {"lat": 38.7223, "lon": -9.1393, "city": "Lisbona (PT - Approdo Cavi Atlantici)"},
+    "lisbon": {"lat": 38.7223, "lon": -9.1393, "city": "Lisbona (PT - Approdo Cavi Atlantici)"},
+
+    "dub": {"lat": 53.3498, "lon": -6.2603, "city": "Dublino (IE - Cloud Hub)"},
+    "dublin": {"lat": 53.3498, "lon": -6.2603, "city": "Dublino (IE - Cloud Hub)"},
+
+    "zur": {"lat": 47.3769, "lon": 8.5417, "city": "Zurigo (CH)"},
+    "zrh": {"lat": 47.4582, "lon": 8.5555, "city": "Zurigo Airport"},
+
+    "vie": {"lat": 48.2082, "lon": 16.3738, "city": "Vienna (AT)"},
+    "vienna": {"lat": 48.2082, "lon": 16.3738, "city": "Vienna (AT)"},
+
+    "sto": {"lat": 59.3293, "lon": 18.0686, "city": "Stoccolma (SE - Hub Nordico)"},
+    "arn": {"lat": 59.6498, "lon": 17.9238, "city": "Stoccolma Arlanda"},
+
+    "waw": {"lat": 52.2297, "lon": 21.0122, "city": "Varsavia (PL - Hub Est Europa)"},
+    "warsaw": {"lat": 52.2297, "lon": 21.0122, "city": "Varsavia (PL - Hub Est Europa)"},
+
+    "nyc": {"lat": 40.7128, "lon": -74.0060, "city": "New York City (US)"},
+    "jfk": {"lat": 40.6413, "lon": -73.7781, "city": "New York JFK"},
+    "ash": {"lat": 39.0438, "lon": -77.4875, "city": "Ashburn / Virginia (US Data Center Hub)"},
+    "ashburn": {"lat": 39.0438, "lon": -77.4875, "city": "Ashburn / Virginia (US Data Center Hub)"},
+    "iad": {"lat": 38.9531, "lon": -77.4565, "city": "Washington Dulles / Ashburn (US)"},
+    "ord": {"lat": 41.9742, "lon": -87.9073, "city": "Chicago (US - Hub Centrale)"},
+    "chi": {"lat": 41.8781, "lon": -87.6298, "city": "Chicago (US - Hub Centrale)"},
+    "dfw": {"lat": 32.8998, "lon": -97.0403, "city": "Dallas (US - Hub Sud)"},
+    "mia": {"lat": 25.7617, "lon": -80.1918, "city": "Miami (US - NAP of the Americas)"},
+    "sfo": {"lat": 37.6190, "lon": -122.3748, "city": "San Francisco (US)"},
+    "sjc": {"lat": 37.3382, "lon": -121.8863, "city": "San Jose / Silicon Valley (US)"},
+    "lax": {"lat": 33.9416, "lon": -118.4085, "city": "Los Angeles (US)"},
+
+    "gru": {"lat": -23.5505, "lon": -46.6333, "city": "San Paolo (BR - Hub Sud America)"},
+    "sao": {"lat": -23.5505, "lon": -46.6333, "city": "San Paolo (BR - Hub Sud America)"},
+
+    "sin": {"lat": 1.3521, "lon": 103.8198, "city": "Singapore (SG - Hub APAC)"},
+    "singapore": {"lat": 1.3521, "lon": 103.8198, "city": "Singapore (SG - Hub APAC)"},
+
+    "tyo": {"lat": 35.6762, "lon": 139.6503, "city": "Tokyo (JP - Hub Pacifico)"},
+    "tokyo": {"lat": 35.6762, "lon": 139.6503, "city": "Tokyo (JP - Hub Pacifico)"},
+    "nrt": {"lat": 35.7720, "lon": 140.3929, "city": "Tokyo Narita (JP)"},
+
+    "hkg": {"lat": 22.3193, "lon": 114.1694, "city": "Hong Kong (HK)"},
+    "syd": {"lat": -33.8688, "lon": 151.2093, "city": "Sydney (AU - Hub Oceania)"},
+    "dxb": {"lat": 25.2048, "lon": 55.2708, "city": "Dubai (AE - Hub Medio Oriente)"},
+    "jnb": {"lat": -26.2041, "lon": 28.0473, "city": "Johannesburg (ZA - Hub Africa)"}
+}
