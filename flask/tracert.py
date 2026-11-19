@@ -11,10 +11,6 @@ import geoip2.errors
 import webbrowser
 
 app = Flask(__name__)
-print("STATIC FOLDER:", app.static_folder)
-print("ESISTE:", os.path.isfile(os.path.join(app.static_folder, "leaflet", "leaflet.js")))
-if os.path.isdir(os.path.join(app.static_folder, "leaflet")):
-    print("CONTENUTO:", os.listdir(os.path.join(app.static_folder, "leaflet")))
 
 # Cartella corrente dello script
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
