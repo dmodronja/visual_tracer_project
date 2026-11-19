@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: rgb(87, 11, 114);
+}
+#map {
+    height: 550px;
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.controls {
+    margin-bottom: 10px;
+}
+input {
+    font-size: 17px;
+    padding: 8px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 9px 20px;
+    margin-left: 20px;
+    background-color: black; color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: darkslategrey;
+}
+#loading {
+    display: none;
+    color: #666;
+    font-style: italic;
+    margin-left: 10px;
+}
+a {
+    text-decoration: none;
+    color: white
+}

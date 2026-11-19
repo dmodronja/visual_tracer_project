@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Traceroute Avanzato</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='leaflet/CSS/style_index.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='leaflet/CSS/leaflet.css') }}" />
+</head>
+<body>
+
+    <h1 style="margin-left: 5%; margin-top: -5px;"><a href="https://github.com/dmodronja/visual_tracer_project">Visual Tracer Project</a></h1>
+    
+    <div class="controls">
+        <input type="text" id="targetInput" placeholder="IP o hostname...">
+        <button onclick="avviaTracciamento()">Traccia percorso</button>
+        <span id="loading">In corso... (attendi 30-60 secondi)</span>
+    </div>
+
+    <div id="map"></div>
+    <script src="{{ url_for('static', filename='leaflet/scripts/leaflet.js') }}"></script>
+    <script>
+        // Inizializza la mappa sul mondo
+        var map = L.map('map').setView([20, 0], 2);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Correzione bug ancoraggio icone Leaflet
+        delete L.Icon.Default.prototype._getIconUrl;
+        L.Icon.Default.mergeOptions({
+            iconRetinaUrl: "{{ url_for('static', filename='leaflet/images/marker-icon-2x.png') }}",
+            iconUrl: "{{ url_for('static', filename='leaflet/images/marker-icon.png') }}",
+            shadowUrl: "{{ url_for('static', filename='leaflet/images/marker-shadow.png') }}",
+        });
+
+        var markersGroup = [];
+        var currentPolyline = null;
+
+        function avviaTracciamento() {
+            var target = document.getElementById('targetInput').value;
+            var loadingSpan = document.getElementById('loading');
+            
+            if(!target) return alert("Indirizzo non valido.");
+            
+            // Pulisci la mappa precedente
+            markersGroup.forEach(m => map.removeLayer(m));
+            markersGroup = [];
+            if(currentPolyline) map.removeLayer(currentPolyline);
+            
+            loadingSpan.style.display = 'inline';
+
+            // Richiesta asincrona al server Flask
+            fetch('/traccia', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ target: target })
+            })
+            .then(res => res.json())
+            .then(data => {
+				loadingSpan.style.display = 'none';
+				if(data.length === 0) {
+					alert("Nessun IP rilevato o host irraggiungibile.");
+					return;
+				}
+
+				var coordinateNodi = [];
+				var ultimaCoordinataStringa = "";
+
+				data.forEach((nodo, index) => {
+				var coord = [nodo.lat, nodo.lon];
+				coordinateNodi.push(coord);
+        
+				var coordStringa = coord.join(',');
+        
+				// Disegna il marker sulla mappa se la coordinata è cambiata
+				if (coordStringa !== ultimaCoordinataStringa) {
+					var marker = L.marker(coord).addTo(map);
+            
+					// CONTROLLO NOVITÀ: Verifica se questo è l'ultimo elemento dell'array 'data'
+					if (index === data.length - 1) {
+					// Trasforma il marker predefinito in ROSSO usando un filtro CSS (ruota la tonalità di 140 gradi)
+						marker._icon.style.filter = "hue-rotate(140deg) saturate(200%)";
+                
+						marker.bindPopup(`<b>🎯 DESTINAZIONE</b><br>Città: ${nodo.city}<br>IP: ${nodo.ip}`);
+					} else {
+                // Marker standard per i salti intermedi
+						marker.bindPopup(`<b>Salto #${index + 1}</b><br>Città: ${nodo.city}<br>IP: ${nodo.ip}`);
+					}
+            
+				markersGroup.push(marker);
+				ultimaCoordinataStringa = coordStringa;
+			}
+		});
+
+    // Disegna la linea continua tra i nodi
+    currentPolyline = L.polyline(coordinateNodi, {color: 'blue', weight: 4, opacity: 0.7}).addTo(map);
+    map.fitBounds(currentPolyline.getBounds(), { padding: [50, 50] });
+	})
+    .catch(err => {
+        loadingSpan.style.display = 'none';
+        alert("Errore durante il tracciamento.");
+        console.error(err);
+        });
+    }
+    </script>
+</body>
+</html>
