@@ -3,6 +3,19 @@ body {
     padding: 20px;
     background-color: rgb(87, 11, 114);
 }
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu li {
+    font-size: 18px;
+    color: white;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-15px);
+}
 #map {
     height: 550px;
     width: 100%;
